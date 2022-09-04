@@ -7,10 +7,12 @@
 - [rayon](https://github.com/rayon-rs/rayon) : a so simple to use library for data parallelism
 - [rand](https://crates.io/crates/rand) : the default choice for pseudo random generation
 
-## [Command line in Rust](https://rust-cli.github.io/book/index.html)
+## [Command line in Rust](https://rust-cli.github.io/book/crates/index.html)
 - [clap](https://docs.rs/clap/) : command-line arguments parser
 - [anyhow](https://docs.rs/anyhow) : Custom Error
 - [indicatif](https://crates.io/crates/indicatif) : you can add progress bars and little spinners to your program
+- [log](https://crates.io/crates/log) : A logging facade provides a single logging API that abstracts over the actual logging implementation.
+- [env_logger](https://crates.io/crates/env_logger) : A logging implementation for `log` which is configured via an environment variable.
 
 ## Machine Learning
 - [polars](https://crates.io/crates/polars) : DataFrame Library based on Apache Arrow
@@ -25,3 +27,6 @@
 
 # metropia
 something at work turn it into rust
+
+# MIT_6.0002
+coding in Rust
