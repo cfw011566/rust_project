@@ -1,4 +1,4 @@
-# useful crate
+# Useful crate
 
 ## [How not to learn Rust](https://dystroy.org/blog/how-not-to-learn-rust/)
 - [regex](https://lib.rs/crates/regex) : how everybody does regular expressions in Rust
@@ -11,6 +11,17 @@
 - [clap](https://docs.rs/clap/) : command-line arguments parser
 - [anyhow](https://docs.rs/anyhow) : Custom Error
 - [indicatif](https://crates.io/crates/indicatif) : you can add progress bars and little spinners to your program
+
+## Machine Learning
+- [polars](https://crates.io/crates/polars) : DataFrame Library based on Apache Arrow
+- [arrow](https://crates.io/crates/arrow) : Apache Arrow Official Native Rust Implementation
+- [smartcore](https://crates.io/crates/smartcore) : The most advanced machine learning library in rust.
+
+## Others
+- [num](https://crates.io/crates/num) : A collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more!
+- [plotters](https://crates.io/crates/plotters)
+- [jsonwebtoken](https://crates.io/crates/jsonwebtoken)
+- [probability](https://crates.io/crates/probability)
 
 # metropia
 something at work turn it into rust
