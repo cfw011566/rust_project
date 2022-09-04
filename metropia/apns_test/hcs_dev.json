@@ -1,0 +1,8 @@
+{
+    "authkey_file": "./AuthKey_P7DAB9NC9M.p8",
+    "key_id": "P7DAB9NC9M",
+    "team_id": "65BJ243CKA",
+    "device_token": "46a84c4a0012049b6484a10bf7a3df5267a262455d7b6b88625c46b1feea89dc",
+    "topic": "com.connectsmart.carpool.transit.gps.directions.rideshare.navigate",
+    "is_production": false
+}
