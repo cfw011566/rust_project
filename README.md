@@ -7,7 +7,7 @@
 - [rayon](https://github.com/rayon-rs/rayon) : a so simple to use library for data parallelism
 - [rand](https://crates.io/crates/rand) : the default choice for pseudo random generation
 
-## [Command line in Rust](https://rust-cli.github.io/book/crates/index.html)
+## [Command Line Applications in Rust](https://rust-cli.github.io/book/resources/index.html)
 - [clap](https://docs.rs/clap/) : command-line arguments parser
 - [anyhow](https://docs.rs/anyhow) : Custom Error
 - [indicatif](https://crates.io/crates/indicatif) : you can add progress bars and little spinners to your program
