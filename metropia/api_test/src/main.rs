@@ -161,24 +161,22 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     // get favorites
-    // get_favorites(&metropia_token).await?;
+    get_favorites(&metropia_token).await;
 
     Ok(())
 }
 
-async fn get_favorites(token: &str) -> Result<(), Box<dyn std::error::Error>> {
+async fn get_favorites(token: &str) {
     let client = reqwest::Client::new();
     let url = format!("{URL_PREFIX}/api/v1/favorites");
-    let resp = client.get(url).bearer_auth(token).send().await?;
-    let body = resp.text().await?;
+    let resp = client.get(url).bearer_auth(token).send().await.unwrap();
+    let body = resp.text().await.unwrap();
     //    println!("favorites = {}", body);
-    let v: Value = serde_json::from_str(&body)?;
+    let v: Value = serde_json::from_str(&body).unwrap();
     let v_str = serde_json::to_string(&v["data"]["favorites"]).unwrap();
     //    println!("v_str = {}", v_str);
-    let favorites: Vec<Favorite> = serde_json::from_str(&v_str)?;
+    let favorites: Vec<Favorite> = serde_json::from_str(&v_str).unwrap();
     println!("favorites = {:#?}", favorites);
-
-    Ok(())
 }
 
 fn login_email_payload(

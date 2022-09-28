@@ -25,16 +25,18 @@
 ## Others
 - [reqwest](https://github.com/seanmonstar/reqwest) : An ergonomic, batteries-included HTTP Client for Rust.
 - [num](https://github.com/rust-num/num) : A collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more!
+- [sqlx](https://github.com/launchbadge/sqlx) : SQLx is an async, pure Rust† SQL crate featuring compile-time checked queries without a DSL.
+
 
 # metropia
 something at work turn it into rust
-- [aes](https://crates.io/crates/aes) : Pure Rust implementation of the Advanced Encryption Standard (a.k.a. Rijndael)
-- [rsa](https://crates.io/crates/rsa) : Pure Rust RSA implementation
-- [sha1](https://crates.io/crates/sha1) : Pure Rust implementation of the SHA-1 hash function.
-- [sha2](https://crates.io/crates/sha2) : Pure Rust implementation of the SHA-2 hash function family including SHA-224, SHA-256, SHA-384, and SHA-512.
-- [cbc](https://crates.io/crates/cbc) : Cipher Block Chaining (CBC) block cipher mode of operation
-- [base64](https://crates.io/crates/base64) : encodes and decodes base64 as bytes or utf8
-- [jsonwebtoken](https://crates.io/crates/jsonwebtoken)
+- [aes](https://github.com/RustCrypto/block-ciphers) : Pure Rust implementation of the Advanced Encryption Standard (a.k.a. Rijndael)
+- [rsa](https://github.com/RustCrypto/RSA) : Pure Rust RSA implementation
+- [sha1](https://github.com/RustCrypto/hashes) : Pure Rust implementation of the SHA-1 hash function.
+- [sha2](https://github.com/RustCrypto/hashes) : Pure Rust implementation of the SHA-2 hash function family including SHA-224, SHA-256, SHA-384, and SHA-512.
+- [cbc](https://github.com/RustCrypto/block-modes) : Cipher Block Chaining (CBC) block cipher mode of operation
+- [base64](https://github.com/marshallpierce/rust-base64) : encodes and decodes base64 as bytes or utf8
+- [jsonwebtoken](https://github.com/Keats/jsonwebtoken)
 
 
 # MIT_6.0002
