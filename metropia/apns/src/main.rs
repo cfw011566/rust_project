@@ -2,8 +2,7 @@ use clap::Parser;
 use jsonwebtoken::{encode, Algorithm, EncodingKey, Header};
 use reqwest::Version;
 use serde::{Deserialize, Serialize};
-use serde_json::value::Number;
-use serde_json::{Map, Value};
+use serde_json::{json, Value};
 use std::error::Error;
 use std::fs;
 use std::io::BufReader;
@@ -55,25 +54,18 @@ async fn main() {
     let config = read_config_from_file(&args.config).unwrap();
     println!("Config = {:?}", config);
 
-    let token = jwt_token(&config);
+    let token = jwt_token(&config).unwrap();
     println!("Bearer = {}", token);
 
     let payload = read_payload_from_file(&args.payload).unwrap();
     println!("Payload = {}", payload);
 
     let alert = apns_alert(&args);
-    let mut apns_json = Map::new();
-    apns_json.insert("aps".to_string(), alert);
-    if let Some(notification_type) = Number::from_f64(12.0) {
-        apns_json.insert(
-            "notification_type".to_string(),
-            Value::Number(notification_type),
-        );
-    }
+    println!("alert = {}", alert);
 
-    apns_json.insert("meta".to_string(), payload);
-    apns_json.insert("message_id".to_string(), Value::String("1234".to_string()));
-    println!("APNS data = {:?}", apns_json);
+    let apns_json: Value =
+        json!({"aps": alert, "meta": payload, "message_id": 1234, "notification_type": 12});
+    println!("APNS data = {}", apns_json);
 
     let url = format!("{URL_PREFIX}/3/device/{}", config.device_token);
     let mut builder = reqwest::Client::new().post(url);
@@ -101,7 +93,7 @@ fn read_config_from_file(path: &PathBuf) -> Result<Config, Box<dyn Error>> {
     Ok(config)
 }
 
-fn jwt_token(config: &Config) -> String {
+fn jwt_token(config: &Config) -> Result<String, Box<dyn Error>> {
     let epoch = SystemTime::now()
         .duration_since(SystemTime::UNIX_EPOCH)
         .unwrap()
@@ -120,9 +112,8 @@ fn jwt_token(config: &Config) -> String {
         &header,
         &my_claims,
         &EncodingKey::from_ec_pem(private_key.as_bytes()).unwrap(),
-    )
-    .unwrap();
-    token
+    )?;
+    Ok(token)
 }
 
 fn read_payload_from_file(path: &PathBuf) -> Result<Value, Box<dyn Error>> {
@@ -135,25 +126,13 @@ fn read_payload_from_file(path: &PathBuf) -> Result<Value, Box<dyn Error>> {
 }
 
 fn apns_alert(args: &Args) -> Value {
-    let mut alert_data = Map::new();
-    if let Some(title) = &args.title {
-        alert_data.insert("title".to_string(), Value::String(title.to_string()));
-    } else {
-        alert_data.insert(
-            "title".to_string(),
-            Value::String("Title from Rust".to_string()),
-        );
+    let mut title = "Title from Rust";
+    if let Some(t) = &args.title {
+        title = t
     }
-    if let Some(body) = &args.body {
-        alert_data.insert("body".to_string(), Value::String(body.to_string()));
-    } else {
-        alert_data.insert(
-            "body".to_string(),
-            Value::String("Body from Rust".to_string()),
-        );
+    let mut body = "Body from Rust";
+    if let Some(b) = &args.body {
+        body = b
     }
-
-    let mut alert_json = Map::new();
-    alert_json.insert("alert".to_string(), Value::Object(alert_data));
-    Value::Object(alert_json)
+    json!({ "alert": { "title": title, "body": body } })
 }
