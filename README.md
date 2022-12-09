@@ -45,3 +45,4 @@ coding in Rust
 
 # bayseian
 - [probability](https://github.com/stainless-steel/probability) : The package provides a probability-theory toolbox.
+- [statrs](https://github.com/statrs-dev/statrs) : Statistical computing library for Rust
