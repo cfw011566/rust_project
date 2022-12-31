@@ -19,6 +19,11 @@
 - [arrow](https://arrow.apache.org) : Apache Arrow Official Native Rust Implementation
 - [smartcore](https://smartcorelib.org) : The most advanced machine learning library in rust.
 
+## Mathematics
+- [statrs](https://github.com/statrs-dev/statrs) : Statistical computing library for Rust
+- [rand_distr](https://github.com/rust-random/rand) : Sampling from random number distributions
+- [nalgebra](https://github.com/dimforge/nalgebra) : Linear algebra library for the Rust programming language.
+
 ## Game
 - [bevy](https://bevyengine.org)
 
