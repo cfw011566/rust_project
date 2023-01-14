@@ -13,7 +13,7 @@
 - [indicatif](https://crates.io/crates/indicatif) : you can add progress bars and little spinners to your program
 - [log](https://crates.io/crates/log) : A logging facade provides a single logging API that abstracts over the actual logging implementation.
 - [env_logger](https://crates.io/crates/env_logger) : A logging implementation for `log` which is configured via an environment variable.
-- [thiserror] (https://docs.rs/thiserror/1.0.38) : This library provides a convenient derive macro for the standard library's std::error::Error trait.
+- [thiserror](https://docs.rs/thiserror/1.0.38) : This library provides a convenient derive macro for the standard library's std::error::Error trait.
 
 ## Machine Learning
 - [polars](https://pola-rs.github.io/polars-book/user-guide/index.html) : DataFrame Library based on Apache Arrow
