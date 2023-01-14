@@ -158,16 +158,6 @@ async fn get_profile() -> Result<()> {
     println!("data = {}", v["data"]);
     let cipher_base64 = &v["data"]["cipher"];
     if let Some(cipher_base64) = cipher_base64.as_str() {
-        /*
-        let cipher_data = base64::decode(cipher_base64).unwrap();
-        let buf = cipher_data.as_slice();
-        let plain_data = Aes256CbcDec::new(&key_data.into(), &iv_data.into())
-            .decrypt_padded_vec_mut::<Pkcs7>(buf)
-            .unwrap();
-        //        println!("plain_data = {:?}", plain_data);
-        let plain_text = String::from_utf8_lossy(&plain_data);
-        */
-
         let plain_text = cipher::decrypt(cipher_base64);
         println!("plain_text = {}", plain_text);
 
@@ -216,15 +206,6 @@ async fn get_reservations() -> Result<()> {
     println!("data = {}", v["data"]);
     let cipher_base64 = &v["data"]["cipher"];
     if let Some(cipher_base64) = cipher_base64.as_str() {
-        /*
-        let cipher_data = base64::decode(cipher_base64).unwrap();
-        let buf = cipher_data.as_slice();
-        let plain_data = Aes256CbcDec::new(&key_data.into(), &iv_data.into())
-            .decrypt_padded_vec_mut::<Pkcs7>(buf)
-            .unwrap();
-        //        println!("plain_data = {:?}", plain_data);
-        let plain_text = String::from_utf8_lossy(&plain_data);
-        */
         let plain_text = cipher::decrypt(cipher_base64);
         println!("plain_text = {}", plain_text);
 
