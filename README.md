@@ -33,6 +33,8 @@
 - [num](https://github.com/rust-num/num) : A collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more!
 - [sqlx](https://github.com/launchbadge/sqlx) : SQLx is an async, pure Rust† SQL crate featuring compile-time checked queries without a DSL.
 - [chrono](https://github.com/chronotope/chrono) : Date and Time for Rust
+- [egui](https://github.com/emilk/egui) : an easy-to-use GUI in pure Rust
+- [yew](https://github.com/yewstack/yew) : Rust / Wasm client web app framework
 
 
 # metropia
