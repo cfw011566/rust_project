@@ -32,6 +32,7 @@
 - [reqwest](https://github.com/seanmonstar/reqwest) : An ergonomic, batteries-included HTTP Client for Rust.
 - [num](https://github.com/rust-num/num) : A collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more!
 - [sqlx](https://github.com/launchbadge/sqlx) : SQLx is an async, pure Rust† SQL crate featuring compile-time checked queries without a DSL.
+- [chrono](https://github.com/chronotope/chrono) : Date and Time for Rust
 
 
 # metropia
