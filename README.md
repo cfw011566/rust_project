@@ -57,4 +57,4 @@ coding in Rust
 - [statrs](https://github.com/statrs-dev/statrs) : Statistical computing library for Rust
 
 # WASM issue
-1. install npm from [website](https://nodejs.org/en/) not brew and downgrade to [note 16.19.0](https://zhuanlan.zhihu.com/p/558577979) to avoid ssl issue
+1. install npm from [website](https://nodejs.org/en/) **not brew** and downgrade to [node 16.19.0](https://zhuanlan.zhihu.com/p/558577979) to avoid ssl issue
