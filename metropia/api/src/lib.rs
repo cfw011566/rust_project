@@ -43,6 +43,9 @@ enum Commands {
 
     /// get reservation
     Reservations,
+
+    /// query with email
+    Carpool,
 }
 
 #[derive(Args, Debug)]
@@ -89,8 +92,33 @@ pub async fn run(cli: Cli) {
         Commands::Reservations => {
             get_reservations().await.unwrap();
         }
+        Commands::Carpool => {
+            carpool();
+        }
         _ => println!("{:?} not supported yet", &cli.command),
     }
+}
+
+fn carpool() {
+    let client = reqwest::Client::builder().build().unwrap();
+    let req = client
+        .get("https://www.google.com")
+        .query(&[("foo", "bar")])
+        .query(&[("test", " space*star:common=equal")])
+        .query(&[("email", "test+3@example.com")])
+        .build()
+        .unwrap();
+    println!("url = {}", req.url());
+
+    let mut req = client.get("https://www.google.com").build().unwrap();
+    let query: String = form_urlencoded::Serializer::new(String::new())
+        .append_pair("foo", "bar")
+        .append_pair("test", " space*star:common=equal")
+        .append_pair("email", "test+3@example.com")
+        .finish();
+    println!("query = {}", query);
+    req.url_mut().set_query(Some(&query));
+    println!("url = {}", req.url());
 }
 
 static URL_PREFIX: &str = "https://dev-portal.connectsmartx.com";

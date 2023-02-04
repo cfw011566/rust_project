@@ -28,6 +28,7 @@ dependencies = [
  "base64 0.21.0",
  "cbc",
  "clap",
+ "form_urlencoded",
  "rand",
  "reqwest",
  "rsa",
