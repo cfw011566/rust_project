@@ -32,6 +32,9 @@
 - [reqwest](https://github.com/seanmonstar/reqwest) : An ergonomic, batteries-included HTTP Client for Rust.
 - [num](https://github.com/rust-num/num) : A collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more!
 - [sqlx](https://github.com/launchbadge/sqlx) : SQLx is an async, pure Rust† SQL crate featuring compile-time checked queries without a DSL.
+- [chrono](https://github.com/chronotope/chrono) : Date and Time for Rust
+- [egui](https://github.com/emilk/egui) : an easy-to-use GUI in pure Rust
+- [yew](https://github.com/yewstack/yew) : Rust / Wasm client web app framework
 
 
 # metropia
@@ -52,3 +55,6 @@ coding in Rust
 # bayseian
 - [probability](https://github.com/stainless-steel/probability) : The package provides a probability-theory toolbox.
 - [statrs](https://github.com/statrs-dev/statrs) : Statistical computing library for Rust
+
+# WASM issue
+1. install npm from [website](https://nodejs.org/en/) **not brew** and downgrade to [node 16.19.0](https://zhuanlan.zhihu.com/p/558577979) to avoid ssl issue
