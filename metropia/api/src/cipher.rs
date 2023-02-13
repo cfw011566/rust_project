@@ -56,9 +56,9 @@ pub fn generate_key_iv() -> String {
     let security_enc_data = public_key
         .encrypt(&mut rng, padding, serialized_security.as_bytes())
         .expect("failed to encrypt");
-    let security_base64 = general_purpose::STANDARD.encode(security_enc_data);
-
-    security_base64
+    //    let security_base64 = general_purpose::STANDARD.encode(security_enc_data);
+    //    security_base64
+    general_purpose::STANDARD.encode(security_enc_data)
 }
 
 pub fn encrypt(clear_text: &str) -> String {
@@ -71,9 +71,10 @@ pub fn encrypt(clear_text: &str) -> String {
         Aes256CbcEnc::new(key_buf.into(), iv_buf.into()).encrypt_padded_vec_mut::<Pkcs7>(buf);
     //    println!("cipher data = {:?}", cipher_data);
     //    println!("cipher data len = {}", cipher_data.len());
-    let cipher_base64 = general_purpose::STANDARD.encode(cipher_data);
-    // println!("cipher = {}", cipher_base64);
-    cipher_base64
+    //    let cipher_base64 = general_purpose::STANDARD.encode(cipher_data);
+    //    println!("cipher = {}", cipher_base64);
+    //    cipher_base64
+    general_purpose::STANDARD.encode(cipher_data)
 }
 
 pub fn decrypt(cipher_base64: &str) -> String {

@@ -5,7 +5,7 @@ use serde_json::{json, Value};
 use std::fs;
 use std::io::{BufRead, BufReader};
 
-pub mod cipher;
+mod cipher;
 
 /// Metropia API by Rust
 #[derive(Parser, Debug)]
