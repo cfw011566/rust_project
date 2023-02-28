@@ -22,7 +22,7 @@
 
 ## Mathematics
 - [statrs](https://github.com/statrs-dev/statrs) : Statistical computing library for Rust
-- [rand_distr](https://github.com/rust-random/rand) : Sampling from random number distributions
+- [rand_distr](https://crates.io/crates/rand_distr) : Sampling from random number distributions
 - [nalgebra](https://github.com/dimforge/nalgebra) : Linear algebra library for the Rust programming language.
 - [ndarray](https://github.com/rust-ndarray/ndarray) : The ndarray crate provides an n-dimensional container for general elements and for numerics.
 
