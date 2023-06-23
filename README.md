@@ -19,6 +19,7 @@
 - [polars](https://pola-rs.github.io/polars-book/user-guide/index.html) : DataFrame Library based on Apache Arrow
 - [arrow](https://arrow.apache.org) : Apache Arrow Official Native Rust Implementation
 - [smartcore](https://smartcorelib.org) : The most advanced machine learning library in rust.
+- [linfa](https://github.com/rust-ml/linfa) : A comprehensive toolkit for Statistical Learning in Rust.
 
 ## Mathematics
 - [statrs](https://github.com/statrs-dev/statrs) : Statistical computing library for Rust
